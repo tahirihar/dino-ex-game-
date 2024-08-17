@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    padding-top: 10px;
+    max-width: 1600px;
+    min-height: 500px;
+    height: 800px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.gray {
+    background-color: rgba(145, 144, 144, 0.775);
+}
+
+.game{
+    width: 650px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+
+#dino{
+    width: 50px;
+    height: 50px;
+    background-image: url(img/dino.png);
+    background-size:  50px 50px;
+    position: relative;
+    top: 150px;
+}
+
+#cactus{
+    width: 40px;
+    height: 40px;
+    background-image: url(img/pngwing.com\ \(9\).png);
+    background-size: 40px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: cactusMov 1s infinite linear;
+}
+
+@keyframes cactusMov{
+    0% {
+        left: 580px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
+.jump{
+    animation: jump 0.3s  linear;
+}
+
+@keyframes jump{
+    0% {
+        top: 150px;
+        right: 0;
+    }
+    30%{
+        top: 130px;
+        right: 5px;
+    }
+    50%{
+        top: 80px;
+        
+    }
+    80%{
+        top: 130px;
+        right: 10px;
+    }
+    100% {
+        top: 150px;
+        right: 15px;
+    }
+}
+
+.paused {
+    animation-play-state: paused !important;
+  }
+
+  .header{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  #reloadBtn{
+    width: 200px;
+    height: auto;
+    background-color: white;
+    font-size: 14px;
+    padding:  10px 0;
+    font-weight: 700;
+    cursor: pointer;
+   
+  }
+
+  #reloadBtn:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 3px 5px 5px rgba(54, 14, 14, 0.858);
+  }
